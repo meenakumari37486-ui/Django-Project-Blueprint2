@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Photos</title>
+    <link rel="stylesheet" href="{% static 'css/photos.css' %}">
+</head>
+<body>
+
+    <header>
+        <h1>📸 Google Photos</h1>
+        <input type="text" placeholder="Search your photos">
+        <input type="file" multiple>
+    </header>
+
+    <nav>
+        <a href="#">Photos</a>
+        <a href="#">Albums</a>
+        <a href="#">Favorites</a>
+        <a href="#">Recently Added</a>
+    </nav>
+
+    <h2>My Photos</h2>
+
+    <div class="gallery">
+        <img src="{% static 'img/bb.jpg' %}">
+        <img src="{% static 'img/lp.jpg' %}">
+        <img src="{% static 'img/do.jpg' %}">
+        <img src="{% static 'img/el.jpg' %}">
+        <img src="{% static 'img/she.jpg' %}">
+        <img src="{% static 'img/lp.jpg' %}">
+    </div>
+
+</body>
+</html>
