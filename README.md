@@ -14,7 +14,9 @@
 ## Database
 - SQLite3
 
-<img width="1920" height="1080" alt="Screenshot 2026-11-07 170202" src="http://127.0.0.1:5500/google/templates.1/youtube/home.html" />
+
+<img width="1920" height="1080" alt="Screenshot 2026-11-07 170312" src="![Uploading Screenshot 2026-11-28 181458.png…]()
+" />
 <img width="1920" height="1080" alt="Screenshot 2026-11-07 170312" src="http://127.0.0.1:5500/google/templates.1/maps/home.html" />
 <img width="1920" height="1080" alt="Screenshot 2026-11-07 171207" src="http://127.0.0.1:5500/google/templates.1/photos/home.html" />
 
