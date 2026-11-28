@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #111111;
+}
+
+/* Top Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    height: 65px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.youtube-icon {
+    color: white;
+    background-color: red;
+    padding: 4px 9px;
+    border-radius: 7px;
+}
+
+.logo-text {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.top-icons {
+    display: flex;
+    gap: 25px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Category bar */
+.categories {
+    display: flex;
+    gap: 12px;
+    padding: 10px 25px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.categories button {
+    border: none;
+    padding: 12px 18px;
+    background-color: #f2f2f2;
+    border-radius: 9px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.categories button:hover {
+    background-color: #dddddd;
+}
+
+.categories .selected {
+    background-color: black;
+    color: white;
+}
+
+/* Shorts */
+.shorts-section {
+    padding: 20px 25px;
+}
+
+.shorts-section h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.shorts-icon {
+    color: red;
+    font-size: 25px;
+}
+
+.shorts-container {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 15px;
+}
+
+.short-card {
+    min-width: 200px;
+    max-width: 200px;
+    height: 340px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.short-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.short-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 12px;
+    color: white;
+    background: linear-gradient(transparent, rgba(0,0,0,0.85));
+}
+
+.short-info h4 {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.short-info p {
+    font-size: 13px;
+}
+
+/* Normal Videos */
+.video-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 25px 100px;
+}
+
+.video-card {
+    cursor: pointer;
+}
+
+.video-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.video-card h3 {
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 7px;
+}
+
+.video-card p {
+    font-size: 14px;
+    color: #606060;
+}
+
+/* Bottom Navigation */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+}
+
+.nav-item {
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.nav-item span {
+    font-size: 23px;
+}
+
+.nav-item p {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.plus {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #f2f2f2;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile {
+    display: inline-flex;
+    width: 28px;
+    height: 28px;
+    background-color: #d9e8e4;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+    .video-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .short-card {
+        min-width: 170px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .video-section {
+        grid-template-columns: 1fr;
+    }
+
+    .categories {
+        padding: 10px;
+    }
+
+    .shorts-section {
+        padding: 15px;
+    }
+
+    .short-card {
+        min-width: 150px;
+        height: 280px;
+    }
+
+    .video-card img {
+        height: 220px;
+    }
+}

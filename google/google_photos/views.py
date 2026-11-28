@@ -1,20 +1,13 @@
-# Create your views here.
-
-from django.shortcuts import render
-
-# Create your views here.
-
-
-
-from django.http import HttpResponse
-
-
-
-
-
-def index(request):
-    return HttpResponse("Hello, world. You're at the google photos app index.")
-
+from django.shortcuts import render, redirect
+from .models import Googlephotos
 
 def home(request):
-    return render(request, 'photos/home.html')
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        image = request.FILES.get('image')
+        if image:
+            Googlephotos.objects.create(title=title, image=image)
+            return redirect('Googlephotos_home')
+    
+    Googlephotos = Googlephotos.objects.all().order_by('-uploaded_at')
+    return render(request, 'Googlephotos/home.html', {'Googlephotoss': Googlephotos})
