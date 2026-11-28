@@ -1,71 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Maps</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Maps - Pure HTML</title>
 </head>
-
 <body>
 
-    <header class="topbar">
-        <div class="logo">☰</div>
+<h2>Google Maps - @-10.7276139,27.4468977,3z</h2>
 
-        <div class="search-box">
-            <input type="text" placeholder="Search Google Maps">
-            <button>🔍</button>
-        </div>
+<!-- Exact same view as your link - Pure HTML iframe -->
+<iframe
+  width="100%" 
+  height="600"
+  frameborder="0"
+  style="border:0"
+  allowfullscreen
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade"
+  src="https://www.google.com/maps?q=-10.7276139,27.4468977&z=3&output=embed">
+</iframe>
 
-        <div class="profile">M</div>
-    </header>
+<br><br>
 
-    <aside class="sidebar">
-        <div class="side-item active">
-            <span>🏠</span>
-            <p>Home</p>
-        </div>
+<!-- Full screen clickable version -->
+<a href="https://www.google.com/maps/@-10.7276139,27.4468977,3z?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+  Open in Google Maps
+</a>
 
-        <div class="side-item">
-            <span>⭐</span>
-            <p>Saved</p>
-        </div>
+<br><br>
 
-        <div class="side-item">
-            <span>🕘</span>
-            <p>Recent</p>
-        </div>
-
-        <div class="side-item">
-            <span>🚌</span>
-            <p>Transit</p>
-        </div>
-
-        <div class="side-item">
-            <span>🚲</span>
-            <p>Explore</p>
-        </div>
-    </aside>
-
-    <main class="map-area">
-
-        <iframe src="https://maps.google.com/maps?q=Bengaluru&t=&z=13&ie=UTF8&iwloc=&output=embed">
-        </iframe>
-
-        <div class="map-buttons">
-            <button>+</button>
-            <button>−</button>
-        </div>
-
-        <div class="place-card">
-            <h2>Explore Bengaluru</h2>
-            <p>Discover places, restaurants and nearby locations.</p>
-            <button class="explore-btn">Explore places</button>
-        </div>
-
-    </main>
+<!-- Alternative Embed with Marker -->
+<h3>With Marker</h3>
+<iframe
+  width="100%"
+  height="500"
+  frameborder="0"
+  style="border:0"
+  src="https://maps.google.com/maps?q=-10.7276139,27.4468977&hl=en&z=3&output=embed">
+</iframe>
 
 </body>
-
 </html>
